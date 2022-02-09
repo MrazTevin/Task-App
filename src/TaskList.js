@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { createContext } from 'react'; 
 
-const TaskList = () => {
+const TaskList = (todos, setTodos) => {
    
   return <div></div>;
 
