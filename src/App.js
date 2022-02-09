@@ -2,14 +2,16 @@ import logo from './logo.svg';
 // import './App.css';
 import Form from './Form';
 import TaskList from './TaskList';
+import { useState } from 'react';
 
-const [todos,setTodos] = useState([])
 
 function App() {
+  const [todos,setTodos] = useState([])
+
   return (
     <div className="App">
       <Form todos={todos} setTodos={setTodos} />
-      <TaskList/>
+      <TaskList todos={todos} setTodos={setTodos} />
     </div>
   );
 }
