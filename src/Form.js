@@ -1,11 +1,17 @@
 import React, { useState } from 'react';
+import TaskList from './TaskList';
+import TaskContext from './TaskList';
 
-const Form = () => {
+const Form = (setTodos,todos) => {
     const [inputText,setInputText] = useState(' ');
 
     const displayValue = e => {
         setInputText(e.target.value)
         console.log(e.target.value);
+    }
+
+    const inputSubmit = () => {
+        setTodos([...todos,{text:inputText,completed:false}])
     }
     
     return (
