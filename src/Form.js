@@ -12,6 +12,7 @@ const Form = (setTodos,todos) => {
 
     const inputSubmit = () => {
         setTodos([...todos,{text:inputText,completed:false,id:Math.random * 1000}])
+        setInputText(' ');
     }
     
     return (
