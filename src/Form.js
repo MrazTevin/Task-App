@@ -11,15 +11,19 @@ const Form = (setTodos,todos) => {
     }
 
     const inputSubmit = () => {
-        setTodos([...todos,{text:inputText,completed:false,id:Math.random * 1000}])
-        setInputText(' ');
+        if (inputText === " ") {
+            return 
+        } else {
+            setTodos([...todos,{text:inputText,completed:false,id:Math.random * 1000}])
+            setInputText(' ');
+        }
     }
     
     return (
         <div className="container_input">
             <div className="button_input">
                 <input type="text" value={inputText} onChange={displayValue}/>
-                <button>ADD</button>
+                <button onClick={inputSubmit}>ADD</button>
                 
             </div>
         </div>
